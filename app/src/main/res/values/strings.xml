@@ -95,5 +95,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_passager">PassagerActivity</string>
     <string name="title_activity_conducteur">ConducteurActivity</string>
+    <string name="title_activity_map_activity">Map</string>
 
 </resources>

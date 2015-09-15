@@ -2,6 +2,7 @@ package com.dinfogarneau.cours03e.ecotrajet;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -65,11 +66,15 @@ public class ConducteurActivity extends FragmentActivity implements ActionBar.Ta
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch(item.getItemId()){
+            case R.id.idAjoutDepart:
+                break;
+            case R.id.idVoirCarte:
+                Intent intent = new Intent(this, map_activity.class);
+                this.startActivity(intent);
+                break;
+            case R.id.idDeconnetion:
         }
 
         return super.onOptionsItemSelected(item);

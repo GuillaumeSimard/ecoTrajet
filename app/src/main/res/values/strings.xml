@@ -96,4 +96,13 @@
     <string name="title_activity_passager">PassagerActivity</string>
     <string name="title_activity_conducteur">ConducteurActivity</string>
 
+    <!-- Page historique -->
+    <string name="lblNomUtil">Guillaume Simard</string>
+    <string name="lblParcoursEmprunte">Liste des parcours emprunté :</string>
+
+    <!-- Page recherche -->
+    <string name="lblPageRecherche">Rechercher un trajet</string>
+    <string name="lblRecherchePointA">Point de départ :</string>
+    <string name="lblRecherchePointB">Point d'arrivé :</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

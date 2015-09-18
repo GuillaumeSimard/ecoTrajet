@@ -59,6 +59,38 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
         </activity>
+        <activity
+            android:name=".HistoriqueActivity"
+            android:label="@string/title_historiqueActivity"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RechercheActivity"
+            android:label="@string/title_rechercheActivity"
+            android:parentActivityName=".HistoriqueActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ResultatRechercheActivity"
+            android:label="@string/title_resultatRechercheActivity"
+            android:parentActivityName=".RechercheActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DescriptionParcoursActivity"
+            android:label="@string/title_DescriptionParcoursActivity"
+            android:parentActivityName=".RechercheActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

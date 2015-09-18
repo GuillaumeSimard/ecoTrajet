@@ -99,10 +99,38 @@
     <!-- Page historique -->
     <string name="lblNomUtil">Guillaume Simard</string>
     <string name="lblParcoursEmprunte">Liste des parcours emprunté :</string>
+    <string name="historique_menu_text">Rechercher</string>
+    <string name="title_historiqueActivity">HistoriqueActivity</string>
 
     <!-- Page recherche -->
     <string name="lblPageRecherche">Rechercher un trajet</string>
     <string name="lblRecherchePointA">Point de départ :</string>
-    <string name="lblRecherchePointB">Point d'arrivé :</string>
+    <string name="lblRecherchePointB">Point d\'arrivé :</string>
+    <string name="lblRechercheDateA">Entre :</string>
+    <string name="lblRechercheDateB">Et :</string>
+    <string name="btnChoisirDate">Sélectionnez une date</string>
+    <string name="lblBtnRechercher">Rechercher</string>
+    <string name="title_rechercheActivity">RechercheActivity</string>
+
+    <!-- Page resultat recherche -->
+    <string name="lblResultatRechercheTitre">Resultat de la recherche</string>
+    <string name="title_resultatRechercheActivity">ResultatRechercheActivity</string>
+
+    <!--Page description -->
+    <string name="lblTitreDescParcours">Parcours 1</string>
+    <string name="lblCoordonneesDepart">Coordonnées de départ :</string>
+    <string name="CoordDepartDescParcours">46°48\'44, 71°12\'52</string>
+    <string name="lblCoordonneesArrive">Coordonnées d\'arrivée :</string>
+    <string name="CoordArriveDescParcours">45°30, 73°30</string>
+    <string name="lblConducteurVoitureDescParcours">Conducteur de la voiture :</string>
+    <string name="ConducteurVoitureDescParcours">Guillaume Simard</string>
+    <string name="lblContributionDescParcours">Contribution demandé par passager :</string>
+    <string name="ContributionDescParcours">20$</string>
+    <string name="btnDemanderDescParcours">Demander au conducteur</string>
+    <string name="title_DescriptionParcoursActivity">DescriptionParcoursActivity</string>
+
     <string name="title_activity_maps">Map</string>
+
+
+    <string name="google_maps_key"> </string>
 </resources>

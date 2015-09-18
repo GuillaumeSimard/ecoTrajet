@@ -1,26 +1,27 @@
 package com.dinfogarneau.cours03e.ecotrajet;
 
 import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-
-public class ChoseActivity extends Activity {
+/**
+ * Created by Remy Huot on 2015-09-18.
+ */
+public class HistoriqueActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chose);
+        setContentView(R.layout.activity_historique);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_chose, menu);
+        getMenuInflater().inflate(R.menu.menu_historique, menu);
         return true;
     }
 
@@ -32,24 +33,12 @@ public class ChoseActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.idInscHistorique) {
+            Intent intent = new Intent(this, RechercheActivity.class);
+            this.startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    //methode onClick lorsque l'on clique sur le bouton inscripption
-    public void onClickPasager(View v)
-    {
-        Intent intent = new Intent(this, HistoriqueActivity.class);
-        this.startActivity(intent);
-    }
-
-    //methode onClick lorsque l'on clique sur le bouton inscripption
-    public void onClickConducteur(View v)
-    {
-        Intent intent = new Intent(this, ConducteurActivity.class);
-        this.startActivity(intent);
     }
 }

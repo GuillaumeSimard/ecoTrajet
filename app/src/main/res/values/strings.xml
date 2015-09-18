@@ -47,6 +47,11 @@
     <string name="textFragmentDepart">Départ</string>
     <string name="textFragmentDemande">Demande</string>
 
+    <!-- id se rapportant à la page d\'ajout de trajet -->
+    <string name="TextDateDepart">Date du trajet : </string>
+    <string name="TextNbPersonne">nombre de passager disponible : </string>
+    <string name="TextHeureDepart">Heure de départ prévue : </string>
+
     <!--#################################### identifiant ########################################-->
 
     <!-- id se rapportant à la page de connexion -->
@@ -71,6 +76,11 @@
     <string name="idTextPassActivity">idTextMain </string>
 
 
+    <!-- id se rapportant à la page d\'ajout de trajet -->
+    <string name="idNbPersonne">idNbPersonne </string>
+    <string name="idHeureDepart">idHeureDepart </string>
+    <string name="idAjoutTrajet">idAjoutTrajet </string>
+
     <!--#################################### Menu ###############################################-->
 
     <!-- main -->
@@ -92,9 +102,13 @@
     <string name="TextVoirCarte">Voir la carte</string>
     <string name="TextDeconnetion">Déconnection</string>
 
+    <!-- Ajout_parcour -->
+    <string name="idAjoutTrajetM">idAjoutTrajetM</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_passager">PassagerActivity</string>
     <string name="title_activity_conducteur">ConducteurActivity</string>
     <string name="title_activity_map_activity">Map</string>
+    <string name="title_activity_ajout_trajet">ajout_trajet</string>
 
 </resources>

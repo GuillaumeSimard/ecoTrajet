@@ -4,6 +4,8 @@ import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -16,10 +18,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
+import static com.google.android.gms.common.api.GoogleApiClient.*;
 
-public class map_activity extends FragmentActivity implements
-        GoogleApiClient.ConnectionCallbacks,
-        GoogleApiClient.OnConnectionFailedListener,
+
+public class ajout_trajet extends FragmentActivity implements
+        ConnectionCallbacks,
+        OnConnectionFailedListener,
         LocationListener,
         GoogleMap.OnMapClickListener,
         GoogleMap.OnMapLongClickListener {
@@ -40,12 +44,34 @@ public class map_activity extends FragmentActivity implements
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map_activity);
+        setContentView(R.layout.activity_ajout_trajet);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         setUpMapIfNeeded();
         buildGoogleApiClient();
         createLocationRequest();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_ajout_trajet, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.idAjoutTrajetM) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -93,7 +119,7 @@ public class map_activity extends FragmentActivity implements
     }
 
     protected synchronized void buildGoogleApiClient() {
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
+        mGoogleApiClient = new Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
@@ -174,7 +200,6 @@ public class map_activity extends FragmentActivity implements
     @Override
     public void onConnected(Bundle bundle) {
         Log.d("MapsActivity", "GoogleApiClient.ConnectionCallbacks.onConnected");
-        Toast.makeText(this, "Connexion au service Google Play réussi", Toast.LENGTH_SHORT).show();
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
         // Mise à jour du UI.
         majPosition();

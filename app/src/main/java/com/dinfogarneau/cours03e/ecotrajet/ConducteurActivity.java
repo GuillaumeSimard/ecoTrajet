@@ -5,7 +5,6 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -66,15 +65,19 @@ public class ConducteurActivity extends FragmentActivity implements ActionBar.Ta
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-
-        switch(item.getItemId()){
+        switch (item.getItemId()){
             case R.id.idAjoutDepart:
+                Intent i = new Intent(this, ajout_trajet.class);
+                this.startActivity(i);
                 break;
             case R.id.idVoirCarte:
-                Intent intent = new Intent(this, map_activity.class);
-                this.startActivity(intent);
+                Intent iMap = new Intent(this, map_activity.class);
+                this.startActivity(iMap);
                 break;
             case R.id.idDeconnetion:
+                Intent iD = new Intent(this, MainActivity.class);
+                this.startActivity(iD);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

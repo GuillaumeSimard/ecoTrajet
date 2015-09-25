@@ -105,10 +105,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dinfogarneau.cours03e.ecotrajet.ConducteurActivity" />
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dinfogarneau.cours03e.ecotrajet.ConducteurActivity" />
-        </activity>
         <activity
             android:name=".ajout_trajet"
             android:label="@string/title_activity_ajout_trajet"

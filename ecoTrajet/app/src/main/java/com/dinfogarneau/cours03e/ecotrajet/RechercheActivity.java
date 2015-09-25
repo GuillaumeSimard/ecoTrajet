@@ -13,8 +13,6 @@ public class RechercheActivity extends Activity {
     /** Called when the activity is first created. */
 
     //déclaration des variables.
-    Button btnFirstDate;
-    Button btnLastDate;
     CalendarView calendarFirst;
     CalendarView calendarSecond;
 
@@ -36,27 +34,13 @@ public class RechercheActivity extends Activity {
     //Méthode permettant d'initiaiser le calendrier
     public void initializeCalendar(CalendarView cal) {
 
-
-        // sets whether to show the week number.
+        //initialisation du calendrier
         cal.setShowWeekNumber(false);
-
-        // sets the first day of week according to Calendar.
-        // here we set Monday as the first day of the Calendar
         cal.setFirstDayOfWeek(2);
-
-        //The background color for the selected week.
         cal.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
-
-        //sets the color for the dates of an unfocused month.
         cal.setUnfocusedMonthDateColor(getResources().getColor(R.color.transparent));
-
-        //sets the color for the separator line between weeks.
         cal.setWeekSeparatorLineColor(getResources().getColor(R.color.transparent));
-
-        //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
         cal.setSelectedDateVerticalBar(R.color.darkgreen);
-
-        //sets the listener to be notified upon selected date change.
         cal.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
 
             @Override
@@ -66,6 +50,7 @@ public class RechercheActivity extends Activity {
             }
 
         });
+
 
     }
 

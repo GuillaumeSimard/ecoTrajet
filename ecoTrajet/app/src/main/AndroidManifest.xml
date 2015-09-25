@@ -86,7 +86,7 @@
         <activity
             android:name=".DescriptionParcoursActivity"
             android:label="@string/title_DescriptionParcoursActivity"
-            android:parentActivityName=".RechercheActivity" >
+            android:parentActivityName=".HistoriqueActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dinfogarneau.cours03e.ecotrajet.HistoriqueActivity" />
@@ -101,10 +101,12 @@
 
         <activity
             android:name=".map_activity"
-            android:label="@string/title_activity_map_activity" >
+            android:label="@string/title_activity_map_activity"
+            android:parentActivityName=".ConducteurActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dinfogarneau.cours03e.ecotrajet.ConducteurActivity" />
+        </activity>
         <activity
             android:name=".ajout_trajet"
             android:label="@string/title_activity_ajout_trajet"

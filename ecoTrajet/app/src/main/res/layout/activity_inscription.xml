@@ -26,8 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ellipsize="start"
-        android:hint="@string/hintIdentifiantInscriptionText"
-        android:inputType="textPassword"/>
+        android:hint="@string/hintIdentifiantInscriptionText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,8 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ellipsize="start"
-        android:hint="@string/hintPrenomInscriptionText"
-        android:inputType="textPassword"/>
+        android:hint="@string/hintPrenomInscriptionText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,8 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:ellipsize="start"
-        android:hint="@string/hintNomIscriptionText"
-        android:inputType="textPassword"/>
+        android:hint="@string/hintNomIscriptionText"/>
 
 
     <TextView
@@ -85,7 +82,7 @@
         android:layout_height="50dp"
         android:ellipsize="start"
         android:hint="@string/hintEmailInscriptionText"
-        android:inputType="textPassword"/>
+        android:inputType="textEmailAddress"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -104,7 +101,7 @@
         android:layout_height="50dp"
         android:ellipsize="start"
         android:hint="@string/hintTelephoneInscriptionText"
-        android:inputType="textPassword"/>
+        android:inputType="phone"/>
 
     <TextView
         android:layout_width="wrap_content"

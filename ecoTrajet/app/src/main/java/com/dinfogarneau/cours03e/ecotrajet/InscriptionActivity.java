@@ -1,13 +1,19 @@
 package com.dinfogarneau.cours03e.ecotrajet;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 public class InscriptionActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +36,10 @@ public class InscriptionActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.idInscMenu) {
+            Toast.makeText(this, "inscription réussie", Toast.LENGTH_SHORT).show();
+            Intent i  = new Intent(this, ChoseActivity.class);
+            startActivity(i);
             return true;
         }
 

@@ -127,6 +127,10 @@
     <!--texte popop confirmation de la modification d'un departs -->
     <string name="titrePopopDeleteDemande">Voulez-vous vraiment modifier cette demande ? </string>
 
+    <!--texte popop confirmation de l'inscription -->
+    <string name="titrePopopInscription">confirmation de l\'inscription </string>
+    <string name="textePopopInscription">Voulez-vous vraiment vpus inscrire ? </string>
+
     <!--id pour les boutons de la page Recherche d'un trajet -->
     <string name="idCalendrier">idCalendrier </string>
 

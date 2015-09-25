@@ -1,5 +1,6 @@
 package com.dinfogarneau.cours03e.ecotrajet;
 
+import android.content.Intent;
 import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -210,7 +211,8 @@ public class map_activity extends FragmentActivity implements
 
     @Override
     public void onMapClick(LatLng latLng) {
-
+        Intent i = new Intent(this, DescriptionParcoursActivity.class);
+        startActivity(i);
     }
 
     @Override

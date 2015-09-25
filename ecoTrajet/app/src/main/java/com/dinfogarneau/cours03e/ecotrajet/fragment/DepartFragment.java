@@ -94,6 +94,8 @@ public class DepartFragment extends ListFragment {
         Intent i = new Intent(getActivity(), map_activity.class);
         this.startActivity(i);
     }
+
+    //méthode permmettant d'afficher un popop
     private void afficherPopop() {
 
         if(dialogConfirmation== null) {
@@ -162,7 +164,7 @@ public class DepartFragment extends ListFragment {
 
             //définir nombre pair ou impair
             if((position % 2) == 0){
-                txtNom.setTextColor(color_arr[1]);
+                txtNom.setTextColor(color_arr[2]);
                 txtNbPassager.setText("2/4");
             }else{
                 txtNom.setTextColor(color_arr[4]);

@@ -70,7 +70,7 @@ public class DemandeFragment extends ListFragment {
         return super.onContextItemSelected(item);
     }
 
-
+    //méthode permmettant d'afficher un popop
     private void afficherPopop() {
 
         if(dialogConfirmation== null) {

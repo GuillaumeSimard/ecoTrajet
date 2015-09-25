@@ -40,6 +40,7 @@ public class ConducteurActivity extends FragmentActivity implements ActionBar.Ta
 
         // Gestion du changement d'onglets lorsque l'utilisateur fait un "swipe".
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
             @Override
             public void onPageSelected(int position) {
                 actionBar.setSelectedNavigationItem(position);
@@ -50,6 +51,7 @@ public class ConducteurActivity extends FragmentActivity implements ActionBar.Ta
             @Override
             public void onPageScrollStateChanged(int arg0) {
             }
+
         });
     }
 
@@ -85,7 +87,7 @@ public class ConducteurActivity extends FragmentActivity implements ActionBar.Ta
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-
+        viewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override

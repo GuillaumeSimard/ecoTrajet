@@ -6,12 +6,16 @@
     android:orientation="vertical">
 
 
+
     <TextView
-        android:id="@android:id/empty"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblNomUtil"
+        android:text="@string/lblNomUtil"
         android:textSize="25dp"
-        android:text="@string/TextDepartConducteur"/>
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="10dp" />
 
 
     <ListView

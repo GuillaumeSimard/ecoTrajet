@@ -59,7 +59,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
         </activity>
-
         <activity
             android:name=".HistoriqueActivity"
             android:label="@string/title_historiqueActivity"
@@ -90,7 +89,7 @@
             android:parentActivityName=".RechercheActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.dinfogarneau.cours03e.ecotrajet.MainActivity" />
+                android:value="com.dinfogarneau.cours03e.ecotrajet.HistoriqueActivity" />
         </activity>
 
         <meta-data
@@ -106,10 +105,21 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dinfogarneau.cours03e.ecotrajet.ConducteurActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinfogarneau.cours03e.ecotrajet.ConducteurActivity" />
         </activity>
         <activity
             android:name=".ajout_trajet"
             android:label="@string/title_activity_ajout_trajet"
+            android:parentActivityName=".ConducteurActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dinfogarneau.cours03e.ecotrajet.ConducteurActivity" />
+        </activity>
+        <activity
+            android:name=".modifPracourActivity"
+            android:label="@string/title_activity_modif_pracour"
             android:parentActivityName=".ConducteurActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

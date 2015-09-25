@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -37,12 +38,18 @@ public class ajout_trajet extends FragmentActivity implements
     // Objet servant à spécifier la qualité désirée de la localisation.
     private LocationRequest mLocationRequest;
     private GoogleApiClient mGoogleApiClient;
+
     // Dernière position obtenue.
     private Location mLastLocation = null;
+
     // Coordonnées initiales : Haute-ville de Québec.
     private final static LatLng QUEBEC_HAUTE_VILLE = new LatLng(46.813395, -71.215954);
     private boolean positionDetecte = false;
     private Dialog dialogConfirmation;
+
+    //variable de gestion du calendrier
+    CalendarView calendar;
+
 
 
 
@@ -56,6 +63,7 @@ public class ajout_trajet extends FragmentActivity implements
         setUpMapIfNeeded();
         buildGoogleApiClient();
         createLocationRequest();
+        initializeCalendar();
     }
 
     @Override
@@ -74,7 +82,7 @@ public class ajout_trajet extends FragmentActivity implements
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.idAjoutTrajetM) {
-            afficherAide();
+            afficherPopop();
             return true;
         }
 
@@ -251,7 +259,7 @@ public class ajout_trajet extends FragmentActivity implements
     }
 
     /*méthode permettant de générer le popop de confirmation*/
-    private void afficherAide() {
+    private void afficherPopop() {
 
         if(dialogConfirmation== null) {
             dialogConfirmation = new AlertDialog.Builder(this)
@@ -274,4 +282,43 @@ public class ajout_trajet extends FragmentActivity implements
             dialogConfirmation.show();
         }
     }
+
+    public void initializeCalendar() {
+
+
+        //initialisation du calendrier
+        calendar = (CalendarView)findViewById(R.id.calendar);
+
+        // sets whether to show the week number.
+        calendar.setShowWeekNumber(false);
+
+        // sets the first day of week according to Calendar.
+        // here we set Monday as the first day of the Calendar
+        calendar.setFirstDayOfWeek(2);
+
+        //The background color for the selected week.
+        calendar.setSelectedWeekBackgroundColor(getResources().getColor(R.color.green));
+
+        //sets the color for the dates of an unfocused month.
+        calendar.setUnfocusedMonthDateColor(getResources().getColor(R.color.transparent));
+
+        //sets the color for the separator line between weeks.
+        calendar.setWeekSeparatorLineColor(getResources().getColor(R.color.transparent));
+
+        //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
+        calendar.setSelectedDateVerticalBar(R.color.darkgreen);
+
+        //sets the listener to be notified upon selected date change.
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
+
+                Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+            }
+
+        });
+
+    }
+
 }

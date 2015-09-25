@@ -52,6 +52,39 @@
     <string name="TextNbPersonne">nombre de passager disponible : </string>
     <string name="TextHeureDepart">Heure de départ prévue : </string>
 
+    <!-- Page recherche -->
+    <string name="lblPageRecherche">Rechercher un trajet</string>
+    <string name="lblRecherchePointA">Point de départ :</string>
+    <string name="lblRecherchePointB">Point d\'arrivé :</string>
+    <string name="lblRechercheDateA">Entre :</string>
+    <string name="lblRechercheDateB">Et :</string>
+    <string name="btnChoisirDate">Sélectionnez une date</string>
+    <string name="lblBtnRechercher">Rechercher</string>
+    <string name="title_rechercheActivity">RechercheActivity</string>
+
+    <!-- Page resultat recherche -->
+    <string name="lblResultatRechercheTitre">Resultat de la recherche</string>
+    <string name="title_resultatRechercheActivity">ResultatRechercheActivity</string>
+
+    <!--Page description -->
+    <string name="lblTitreDescParcours">Parcours 1</string>
+    <string name="lblCoordonneesDepart">Coordonnées de départ :</string>
+    <string name="CoordDepartDescParcours">46°48\'44, 71°12\'52</string>
+    <string name="lblCoordonneesArrive">Coordonnées d\'arrivée :</string>
+    <string name="CoordArriveDescParcours">45°30, 73°30</string>
+    <string name="lblConducteurVoitureDescParcours">Conducteur de la voiture :</string>
+    <string name="ConducteurVoitureDescParcours">Guillaume Simard</string>
+    <string name="lblContributionDescParcours">Contribution demandé par passager :</string>
+    <string name="ContributionDescParcours">20$</string>
+    <string name="btnDemanderDescParcours">Demander au conducteur</string>
+    <string name="title_DescriptionParcoursActivity">DescriptionParcoursActivity</string>
+
+    <!--Page Modification d'un parcours -->
+    <string name="text_Title_activity">modification du parcours : Parcours 1</string>
+    <string name="text_modif_nbPassager">4</string>
+    <string name="text_modif_heure">15 h 00</string>
+
+
     <!--#################################### identifiant ########################################-->
 
     <!-- id se rapportant à la page de connexion -->
@@ -83,9 +116,22 @@
     <string name="titrePopopCofirm">confirmation de l\'ajout </string>
     <string name="textePopoAjout">Voulez-vous vraiment ajouter ce trajet à votre liste ?  </string>
 
+    <!--texte popop confirmation supression departs -->
+    <string name="titrePopopDeleteDepart">confirmation de la suppression </string>
+    <string name="textePopoSupprimer">Voulez-vous vraiment supprimer ce départs  </string>
+
+    <!--texte popop confirmation de la modification d'un departs -->
+    <string name="titrePopopModifDepart">confirmation de la modification </string>
+    <string name="textePopopModifDepart">Voulez-vous vraiment modifier ce depart ? </string>
+
+    <!--texte popop confirmation de la modification d'un departs -->
+    <string name="titrePopopDeleteDemande">Voulez-vous vraiment modifier cette demande ? </string>
+
     <!--id pour les boutons de la page Recherche d'un trajet -->
-    <string name="idBoutonEntre">idBtnEntre </string>
-    <string name="idBoutonEt">idBtnEt</string>
+    <string name="idCalendrier">idCalendrier </string>
+
+    <!--id pour les boutons de la page Recherche d'un trajet -->
+    <string name="idRow_depart_nb_place">idRow </string>
 
     <!--#################################### Menu ###############################################-->
 
@@ -111,11 +157,22 @@
     <!-- Ajout_parcour -->
     <string name="idAjoutTrajetM">idAjoutTrajetM</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_passager">PassagerActivity</string>
     <string name="title_activity_conducteur">ConducteurActivity</string>
     <string name="title_activity_map_activity">Map</string>
     <string name="title_activity_ajout_trajet">ajout_trajet</string>
+
+    <!--menu contextuelle pour le fragment depart-->
+    <!-- texte, id -->
+    <string name="idModifDepart">idModifDepart</string>
+    <string name="idDeleteDepart">idDeleteDeparts</string>
+    <string name="TextModifDepart">modification</string>
+    <string name="texteDeleteDepart">Supprimer</string>
+
+
+    <!--menu contextuelle pour le fragment demandes-->
+    <!-- texte, id -->
+    <string name="idDeleteDemande">idModifDepart</string>
 
     <!-- Page historique -->
     <string name="lblNomUtil">Guillaume Simard</string>
@@ -123,35 +180,13 @@
     <string name="historique_menu_text">Rechercher</string>
     <string name="title_historiqueActivity">HistoriqueActivity</string>
 
-    <!-- Page recherche -->
-    <string name="lblPageRecherche">Rechercher un trajet</string>
-    <string name="lblRecherchePointA">Point de départ :</string>
-    <string name="lblRecherchePointB">Point d\'arrivé :</string>
-    <string name="lblRechercheDateA">Entre :</string>
-    <string name="lblRechercheDateB">Et :</string>
-    <string name="btnChoisirDate">Sélectionnez une date</string>
-    <string name="lblBtnRechercher">Rechercher</string>
-    <string name="title_rechercheActivity">RechercheActivity</string>
 
-    <!-- Page resultat recherche -->
-    <string name="lblResultatRechercheTitre">Resultat de la recherche</string>
-    <string name="title_resultatRechercheActivity">ResultatRechercheActivity</string>
 
-    <!--Page description -->
-    <string name="lblTitreDescParcours">Parcours 1</string>
-    <string name="lblCoordonneesDepart">Coordonnées de départ :</string>
-    <string name="CoordDepartDescParcours">46°48\'44, 71°12\'52</string>
-    <string name="lblCoordonneesArrive">Coordonnées d\'arrivée :</string>
-    <string name="CoordArriveDescParcours">45°30, 73°30</string>
-    <string name="lblConducteurVoitureDescParcours">Conducteur de la voiture :</string>
-    <string name="ConducteurVoitureDescParcours">Guillaume Simard</string>
-    <string name="lblContributionDescParcours">Contribution demandé par passager :</string>
-    <string name="ContributionDescParcours">20$</string>
-    <string name="btnDemanderDescParcours">Demander au conducteur</string>
-    <string name="title_DescriptionParcoursActivity">DescriptionParcoursActivity</string>
+
 
     <string name="title_activity_maps">Map</string>
 
 
     <string name="google_maps_key"> </string>
+    <string name="title_activity_modif_pracour">modifPracourActivity</string>
 </resources>

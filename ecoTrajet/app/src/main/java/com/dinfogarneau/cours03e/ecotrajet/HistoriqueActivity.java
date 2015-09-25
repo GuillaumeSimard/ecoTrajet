@@ -6,16 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 /**
  * Created by Remy Huot on 2015-09-18.
  */
 public class HistoriqueActivity extends ListActivity {
 
+    //déclaration des variables
+    private String[] lstDepartPassager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historique);
+        lstDepartPassager = getResources().getStringArray(R.array.MesDepartsEmprunter);
+        this.setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lstDepartPassager));
     }
 
     @Override
@@ -40,5 +47,12 @@ public class HistoriqueActivity extends ListActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+
+        Intent i = new Intent(this, DescriptionParcoursActivity.class);
+        this.startActivity(i);
     }
 }
